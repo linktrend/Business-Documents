@@ -60,6 +60,18 @@ Standard workflow sequence:
 5. Run reliability, exception-path, and credential tests.
 6. Deploy as a managed service and monitor execution.
 
+Delivery throughput baseline:
+
+- build or refactor template automation in about 30 minutes where source templates are close
+- run QA and exception checks in about 30 minutes
+- harden in internal production for about 2 to 3 weeks before broad external release
+
+Phased rollout policy:
+
+1. Phase 1: internal operations and CEO-support workflows first.
+2. Phase 2: LiNKtrend Media and LiNKsites content workflows.
+3. Phase 3: external SMB administrative workflow bundles.
+
 Operational rules:
 
 - Do not start work that cannot be tied to a clear commercial, operational, or product objective.
@@ -76,6 +88,7 @@ Minimum release criteria:
 - support owner can diagnose common issues without reverse engineering the system
 - documentation and operating notes are current
 - financial and support impact of the release is understood
+- credit-cost profile is validated (execution credits and tool credits)
 
 ## 8. Troubleshooting and Incident Response
 
@@ -96,6 +109,12 @@ Common incident classes:
 - broken template or workflow logic
 - unexpected support load or user misuse
 - cost spike caused by runaway compute, model use, or automation volume
+
+Cost-protection policy:
+
+- every run must meter execution credits and tool credits
+- tool-heavy runs must pass direct provider cost through credit consumption
+- the monthly blended gross margin floor is 80%; workflows that violate this are repriced, redesigned, or paused
 
 ## 9. Security, Data, and Compliance Rules
 
@@ -121,6 +140,9 @@ Continuous-improvement loop:
 - Workflow success rate.
 - Time to diagnose failed runs.
 - Automation upsell rate from LiNKsites.
+- Credits sold by tier and PAYG share.
+- Blended gross margin per credit.
+- Tool-credit share versus execution-credit share.
 - Gross margin by automation package.
 
 ## 12. Known Constraints and Open Issues

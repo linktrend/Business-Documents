@@ -56,7 +56,11 @@ The practical advantages are:
 
 ## 5. Market and Customer Strategy
 
-LiNKautowork should launch with the same multi-market bias as the wider studio: the United States, United Kingdom, Taiwan, and Costa Rica.
+LiNKautowork launch strategy is internal-first:
+
+- first 30 days: phase 1 automations for LiNKtrend internal operations and CEO execution support
+- days 31 to 90: phase 2 automations for LiNKtrend Media and LiNKsites content operations
+- after internal hardening and KPI validation: phase 3 commercialization into external SMB workflow bundles
 
 Customer selection criteria:
 
@@ -67,7 +71,7 @@ Customer selection criteria:
 
 ## 6. Delivery and Operating Model
 
-Core workflows:
+Core build and hardening workflow:
 
 - Map the internal or client workflow and define the target future-state process.
 - Research best-practice workflows by industry.
@@ -75,6 +79,12 @@ Core workflows:
 - Modify and harden workflows to LiNKtrend standards.
 - Run reliability, exception-path, and credential tests.
 - Deploy as a managed service and monitor execution.
+
+Initial throughput planning assumption:
+
+- build or refactor workflow: about 30 minutes
+- QA and failure-path checks: about 30 minutes
+- production hardening in internal use: about 2 to 3 weeks before broad external sale
 
 Technology and infrastructure base:
 
@@ -88,23 +98,32 @@ Technology and infrastructure base:
 
 Revenue logic:
 
-- One-time setup and adaptation fees.
-- Monthly managed workflow fees.
-- Bundled upsells from LiNKsites and LiNKbots.
-- Later-stage vertical packages sold through the company site and a dedicated LiNKautowork site.
+- Shared credit economy with LiNKskills so one credit currency can be used across both lines.
+- Recurring bundle subscriptions plus PAYG top-ups.
+- Optional implementation fees for unusual integration complexity.
+- Bundled upsells from LiNKsites and LiNKbots and direct standalone sales.
 
 Pricing and packaging principles:
 
-- Starter service planning anchor: about USD 500 to 1,000 one-time plus USD 99 to 199 per month.
-- Growth stack planning anchor: about USD 1,500 to 3,000 one-time plus USD 249 to 599 per month.
-- Pricing should stay meaningfully below bespoke automation consultancies while protecting margin through reuse.
+- Internal COGS baseline: $0.012 per credit.
+- Standard: 2,500 credits at $199.99 per month (about $0.080 per credit, about 85.0% gross margin).
+- Premium: 10,000 credits at $699.99 per month (about $0.070 per credit, about 82.9% gross margin).
+- Enterprise: 25,000 credits at $1,624.99 per month (about $0.065 per credit, about 81.5% gross margin).
+- PAYG: $0.10 per credit (about 88.0% gross margin).
+- Margin floor: no package or custom statement of work can be approved below 80% gross margin without explicit executive exception.
+
+Credit charging logic:
+
+- every run is billed as execution credits plus tool credits
+- tool credits are computed from direct provider costs with reliability buffer to prevent margin leakage
+- bundle overages are charged at the client's package-effective credit rate, and no-bundle overages are charged at PAYG rate
 
 ## 8. Dependencies and Shared Services
 
 This business line depends on shared LiNKtrend systems:
 
 - LiNKskills for governed logic, skills, and standards where relevant
-- LiNKautowork for recurring process execution and handoffs where relevant
+- n8n runtime and workflow library governance for recurring process execution
 - LiNKbots where agent execution or support workflows matter
 - QA for release and delivery control
 - Admin, finance, legal, and reporting for commercial governance
@@ -128,8 +147,8 @@ Mitigation principles:
 
 Year-one objectives:
 
-- Standardize the first internal automation set inside 30 days.
-- Package the first 3 to 5 external offers within 90 days.
+- Build and QA the first 12 phase-1 and phase-2 automations inside 30 days and place them into internal production hardening.
+- Publish the first external credit-priced automation catalog within 90 days.
 - Reach 10 or more recurring automation customers within 12 months.
 
 Core KPIs:
@@ -139,6 +158,8 @@ Core KPIs:
 - Workflow success rate.
 - Time to diagnose failed runs.
 - Automation upsell rate from LiNKsites.
+- Credits sold by tier.
+- Blended gross margin per credit.
 - Gross margin by automation package.
 
 ## 11. Management Recommendation

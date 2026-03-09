@@ -3,135 +3,150 @@
 Status: Draft for review  
 Business line: LiNKsites  
 Document type: Operational Manual and Guide  
-Planning basis: This draft uses a consistent structure informed by current business-plan, SOP, financial-planning, strategy-execution, and PRD best practices, then adapts them to LiNKtrend's operating model and current repository context.
+Planning basis: Updated to approved package architecture and operating mechanics.
 
 ## 1. Purpose and Scope
 
-This document explains what LiNKsites is, how it operates, how it should be run day to day, how quality is protected, how issues are diagnosed, and what must be improved over time.
+This manual defines how LiNKsites is operated day to day, including site factory execution, lead flow, package delivery, support handling, and troubleshooting.
 
-## 2. What It Is
+## 2. What LiNKsites Is
 
-LiNKsites is a website factory for prebuilt, transferable, multi-tenant sites that convert fast and upsell into automation and bots.
+LiNKsites is a template-first website factory that sells bundled outcomes:
 
-Mission:
+- pre-built website delivery,
+- managed hosting and maintenance,
+- optional automation and service allowances by package.
 
-Turn repeatable website delivery into immediate cash flow by building fully ready sites before the sale and transferring them into managed production quickly.
+## 3. Operating Context
 
-## 3. Current Operating Context
-
-- Primary workspace exists at `/Users/linktrend/Projects/Dev_Sites`.
-- The current system already includes a central Payload CMS, shared Next.js frontend platform, template modules, factory scripts, pricing SOPs, runbooks, and deployment guides.
-- This is the most launch-ready short-term cash flow line in the portfolio.
+- Primary workspace: `/Users/linktrend/Projects/Dev_Sites`.
+- Core assets: shared Next.js frontend, central Payload CMS, factory scripts, runbooks, deployment guides.
+- Hosting baseline: DigitalOcean runtime with Supabase-backed data services.
+- Locale strategy: launch one locale (US or Japan), open second locale after 20 active sites in first locale.
 
 ## 4. Roles and Responsibilities
 
-Core roles for this business line:
-
-- Founder or executive owner: approves major priorities, budgets, pricing, and kill or scale decisions.
-- Department owner or line lead: owns execution quality, backlog, and KPI attainment.
-- QA owner: verifies release readiness and checks for avoidable defects or regressions.
-- Operations owner: manages hosting, support, credentials, and incident handling.
-- Media and growth owner: aligns distribution and sales support with current priorities.
+- Executive owner: pricing, scope, kill/scale decisions.
+- Line lead: day-to-day execution, quality, and KPI ownership.
+- QA lead: release gates and defect prevention.
+- Ops lead: hosting, domain, backups, incidents, and rollback.
+- Sales lead: package fit, close process, and renewal discipline.
+- LiNKbot operators: maintain bot playbooks and approval policies.
 
 ## 5. Systems and Tooling
 
-- Next.js frontend templates.
-- Payload CMS as central content and tenant control plane.
-- Supabase-hosted PostgreSQL for core data storage.
-- DigitalOcean-hosted shared and premium deployments.
-- Optional n8n hooks for content and operational workflows.
+- Next.js template system for site generation.
+- Payload CMS as multi-tenant content and control layer.
+- Supabase for shared data services and governance controls.
+- DigitalOcean for control-plane and runtime deployment.
+- CRM for lead and pipeline management.
+- LiNKbots for lead research, prebuild orchestration, CRM updates, and follow-up workflow triggers.
+- LiNKautowork services for package allowances and post-sale automations.
 
-Shared system expectations:
+## 6. Package Operations
 
-- all production changes must be documented and reviewable
-- credentials and sensitive context must be controlled centrally
-- repeatable work should be automated or templatized quickly
-- release and deployment actions must have rollback paths
+Standard operations profile:
 
-## 6. Standard Operating Workflows
+- no-blog lightweight site profile,
+- shared runtime delivery,
+- recurring price: $14.99 (1-year) or $11.99 effective (2-year),
+- setup: $300.
 
-Standard workflow sequence:
+Premium operations profile:
 
-1. Prospect identification by market and niche.
-2. Prebuilt site creation and internal QA.
-3. Sales outreach with a finished site already in hand.
-4. Close, domain mapping, transfer, and go-live.
-5. Managed hosting, light maintenance, and upsell path into LiNKautowork and LiNKbots.
+- richer site with blog and increased page/media envelope,
+- shared runtime with higher service allowance,
+- recurring price: $29.99 (1-year) or $24.99 effective (2-year),
+- setup: $750,
+- included allowances: 300 automations/month, 150 AI responses/month, 2 blog posts/quarter.
 
-Operational rules:
+Enterprise operations profile:
 
-- Do not start work that cannot be tied to a clear commercial, operational, or product objective.
-- Prefer template adaptation and governed reuse over net-new build paths.
-- Record assumptions, credentials required, dependencies, and release notes before go-live.
-- Review output quality before external delivery or production exposure.
+- dedicated runtime isolation and priority service,
+- recurring price: $249.99 (1-year) or $199.99 effective (2-year),
+- setup: $1,999,
+- domain included (costed at average $15/year),
+- included allowances: 1,500 automations/month, 500 AI responses/month, 6 blog posts/quarter, on-site chat support operations.
 
-## 7. Quality Control and Release Criteria
+## 7. Standard Operating Workflow
 
-Minimum release criteria:
+1. LiNKbot lead research and qualification.
+2. Lead enrichment and insertion into CRM.
+3. Template selection and prebuild generation.
+4. Internal QA and package fit validation.
+5. Outreach and close (human or LiNKbot-assisted process).
+6. Domain mapping, go-live, and package provisioning.
+7. Ongoing support, allowance tracking, and upsell monitoring.
 
-- core functionality is verified against the intended use case
-- failure paths or exception handling have been tested
-- support owner can diagnose common issues without reverse engineering the system
-- documentation and operating notes are current
-- financial and support impact of the release is understood
+## 8. Quality Control and Release Criteria
 
-## 8. Troubleshooting and Incident Response
+Minimum release gate:
 
-First-response troubleshooting checklist:
+- package scope validated against signed offer,
+- functional checks and content checks completed,
+- DNS/domain mapping validated,
+- rollback plan documented,
+- support handoff notes complete.
 
-1. Confirm what changed, when it changed, and whether the issue is isolated or systemic.
-2. Check infrastructure health, credentials, integrations, and recent deployments.
-3. Reproduce the issue in the smallest possible scope.
-4. Determine whether the problem is data, logic, environment, dependency, or user-flow related.
-5. Apply rollback or safe-mode behavior if customer impact is material.
-6. Document root cause, fix, and preventive follow-up.
+## 9. Overage and Capacity Policy Operations
+
+Core overage rates:
+
+- outbound transfer: $0.013/GiB,
+- DB egress: $0.117/GB,
+- DB size: $0.1625/GB-month,
+- DB storage: $0.0273/GB-month,
+- DB MAU where applicable: $0.004225/MAU-month.
+
+Service overage rates:
+
+- Premium: automations $0.010/execution, AI responses $0.008/response, extra blog posts $24/post.
+- Enterprise: automations $0.008/execution, AI responses $0.006/response, extra blog posts $20/post.
+
+Capacity events:
+
+- CPU/RAM pressure is handled as a capacity event, not unit overage.
+- If sustained pressure requires resize or migration, apply incremental provider cost plus 30% prorated until package alignment.
+
+## 10. Troubleshooting and Incident Response
+
+Incident checklist:
+
+1. classify issue as content, template, integration, infrastructure, or capacity.
+2. verify change history and recent deployments.
+3. isolate impacted tenants and package tier.
+4. apply rollback or containment if customer impact is material.
+5. document root cause and preventive action.
 
 Common incident classes:
 
-- deployment or environment misconfiguration
-- upstream provider or API change
-- credential or permission failure
-- broken template or workflow logic
-- unexpected support load or user misuse
-- cost spike caused by runaway compute, model use, or automation volume
+- domain mapping errors,
+- deployment/environment drift,
+- automation allowance misconfiguration,
+- provider or API dependency failures,
+- capacity events from traffic spikes or heavy workflows.
 
-## 9. Security, Data, and Compliance Rules
+## 11. Security and Data Handling Rules
 
-- Use least-privilege credentials and avoid broad shared secrets where possible.
-- Separate internal and client context when the business line serves both.
-- Do not expose internal logic, data, or templates unnecessarily.
-- Log commercially material incidents, policy exceptions, and access issues.
-- Review legal and data-handling requirements before expanding to new regions or verticals.
+- enforce least privilege for credentials and service keys,
+- separate customer and internal operational contexts,
+- log all material access exceptions and incidents,
+- review regional legal/data implications before locale expansion.
 
-## 10. Maintenance and Continuous Improvement
+## 12. KPI and Reporting Rules
 
-Continuous-improvement loop:
+- prebuilt sites/week,
+- outreach-to-close ratio,
+- setup revenue collected,
+- package mix,
+- recurring margin by package,
+- churn by package,
+- overage recovery rate,
+- capacity-event count and resolution time.
 
-1. Capture recurring friction, support burden, delivery delays, and quality failures.
-2. Convert repeated fixes into templates, automation, or product rules.
-3. Review KPI performance weekly and strategy monthly.
-4. Retire, redesign, or reprice work that repeatedly breaks margin or quality expectations.
+## 13. Continuous Improvement Backlog
 
-## 11. Operating KPIs
-
-- Prebuilt sites created per week.
-- Outreach to close ratio.
-- Setup fees collected.
-- Monthly churn.
-- Upgrade rate into automation or premium hosting.
-- Average gross margin per site.
-
-## 12. Known Constraints and Open Issues
-
-Current constraints:
-
-- The core multi-tenant architecture is already defined and substantially implemented.
-- The biggest needs are sales tooling, template coverage, deployment polish, and smoother transfer workflows.
-- The product line now needs more business packaging than fundamental architecture work.
-
-Future improvements needed:
-
-- Automated lead-to-prebuild pipeline.
-- Template catalog expansion by region and industry.
-- More automated domain transfer and premium deployment provisioning.
-- Stronger analytics and conversion benchmarking by niche.
+- improve lead-to-prebuild automation quality,
+- expand high-converting templates by niche,
+- tighten pricing/allowance fit based on real usage,
+- reduce manual support load with workflow automation and better documentation.

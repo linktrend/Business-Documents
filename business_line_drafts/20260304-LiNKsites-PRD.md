@@ -3,137 +3,139 @@
 Status: Draft for review  
 Business line: LiNKsites  
 Document type: Product Requirements Document  
-Planning basis: This draft uses a consistent structure informed by current business-plan, SOP, financial-planning, strategy-execution, and PRD best practices, then adapts them to LiNKtrend's operating model and current repository context.
+Planning basis: Updated to approved package model and operating architecture.
 
 ## 1. Product Overview
 
-LiNKsites is a website factory for prebuilt, transferable, multi-tenant sites that convert fast and upsell into automation and bots.
+LiNKsites is a template-first website factory that delivers pre-built websites plus managed hosting and operating services through three packages: Standard, Premium, and Enterprise.
 
 ## 2. Background and Current State
 
-- Primary workspace exists at `/Users/linktrend/Projects/Dev_Sites`.
-- The current system already includes a central Payload CMS, shared Next.js frontend platform, template modules, factory scripts, pricing SOPs, runbooks, and deployment guides.
-- This is the most launch-ready short-term cash flow line in the portfolio.
-
-Current development needs:
-
-- The core multi-tenant architecture is already defined and substantially implemented.
-- The biggest needs are sales tooling, template coverage, deployment polish, and smoother transfer workflows.
-- The product line now needs more business packaging than fundamental architecture work.
+- Workspace exists at `/Users/linktrend/Projects/Dev_Sites`.
+- Existing assets include central Payload CMS, shared frontend templates, factory scripts, deployment guides, and operating SOPs.
+- LiNKsites is the most launch-ready cash-flow line in the studio.
 
 ## 3. Problem Statement
 
-Most SMBs have weak websites, poor conversion paths, and fragmented vendors. Traditional agencies are too slow and too expensive for LiNKtrend's target customers.
+Target SMBs often face three issues:
+
+- websites that do not convert,
+- fragmented vendors and unclear ownership,
+- slow and costly custom-agency delivery models.
+
+LiNKsites solves this by combining pre-built site production and managed operations under clear package boundaries.
 
 ## 4. Goals
 
-- Create a product or service line that is commercially clear and operationally repeatable.
-- Use shared LiNKtrend infrastructure to reduce time, cost, and quality drift.
-- Make the line measurable through operational, quality, and financial KPIs.
-- Preserve future expansion paths without overbuilding V1.
+- deliver repeatable website outcomes with controlled support burden,
+- standardize package scope and pricing,
+- maintain high recurring gross margin while preserving quality,
+- establish a sales engine that starts from pre-built proof,
+- create a clean upsell path to LiNKautowork and LiNKbots.
 
 ## 5. Non-Goals
 
-- Turning the line into unlimited bespoke consulting.
-- Supporting every possible market, feature, or edge case in V1.
-- Scaling infrastructure ahead of proven demand.
-- Breaking LiNKtrend's shared governance or QA standards for speed alone.
+- unlimited bespoke agency work,
+- uncontrolled package customization,
+- multi-locale rollout before first-locale density target,
+- infrastructure scaling ahead of validated demand.
 
 ## 6. Users and Personas
 
-- SMB service businesses in the US, UK, Taiwan, and Costa Rica.
-- Businesses with weak digital presence and obvious conversion gaps.
-- Clients that can start with a website and then expand into automations and bots.
+- SMB service businesses in first launch locale (US or Japan),
+- businesses requiring managed execution rather than tooling-only products,
+- customers likely to grow into automation and advanced service layers.
 
 ## 7. Primary Use Cases
 
-- Standard managed site on shared infrastructure.
-- Premium site with dedicated frontend deployment.
-- Add-on localization, content operations, analytics, and connected automations.
+- Standard package: lightweight shared-runtime website operations.
+- Premium package: richer shared-runtime website with blog and service allowances.
+- Enterprise package: dedicated-runtime website with priority support and expanded service allowances.
 
 ## 8. Functional Requirements
 
-- LiNKsites must have a clearly defined offer and delivery workflow.
-- LiNKsites must integrate with the shared LiNKtrend operating stack where relevant.
-- LiNKsites must support measurable quality and financial controls.
-- LiNKsites must have documentation sufficient for repeatable delivery and troubleshooting.
-- LiNKsites must support go or no-go reviews based on evidence, not intuition alone.
+- package definitions must be explicit and contract-safe,
+- site factory workflow must be template-driven and repeatable,
+- LiNKbot workflows must support lead generation, CRM updates, and operational orchestration,
+- delivery workflow must include QA gate before production handoff,
+- overage and capacity-event logic must be enforceable and auditable.
 
-Line-specific workflow requirements:
+Required workflow stages:
 
-- Prospect identification by market and niche.
-- Prebuilt site creation and internal QA.
-- Sales outreach with a finished site already in hand.
-- Close, domain mapping, transfer, and go-live.
-- Managed hosting, light maintenance, and upsell path into LiNKautowork and LiNKbots.
+1. lead research and qualification,
+2. CRM insertion and prioritization,
+3. template adaptation and prebuild,
+4. internal QA and package fit check,
+5. close and provisioning,
+6. managed operations and upsell lifecycle.
 
 ## 9. Non-Functional Requirements
 
-- Reliability appropriate to the commercial promise being made.
-- Security and least-privilege access for production systems and credentials.
-- Observability sufficient to diagnose failures without guesswork.
-- Maintainability through templates, standards, and shared documentation.
-- Scalability only to the degree justified by actual adoption.
+- reliability aligned to package commitments,
+- secure credential handling and tenant isolation controls,
+- observability for rapid incident diagnosis,
+- maintainability through templates and SOP-driven operations,
+- scalability with locale and package gating logic.
 
 ## 10. Architecture and Integrations
 
-- Next.js frontend templates.
-- Payload CMS as central content and tenant control plane.
-- Supabase-hosted PostgreSQL for core data storage.
-- DigitalOcean-hosted shared and premium deployments.
-- Optional n8n hooks for content and operational workflows.
-
-Shared integration expectations:
-
-- Use LiNKskills where governed logic is required.
-- Use LiNKautowork where recurring process execution is required.
-- Use LiNKbots where agent orchestration or digital labor is required.
-- Use DigitalOcean as the default hosting base unless a clear reason exists to break that rule.
+- shared control-plane for CMS and operations,
+- shared runtime droplets for Standard and Premium tiers,
+- dedicated runtime for Enterprise tier,
+- Payload CMS for content and tenant control,
+- Supabase-backed data layer,
+- CRM integration for lead and pipeline lifecycle,
+- LiNKbot orchestration for repetitive execution paths,
+- LiNKautowork integrations for service allowances.
 
 ## 11. Data, Security, and Compliance
 
-- Protect credentials, tenant data, and internal logic using centralized controls.
-- Separate internal and client data where both exist.
-- Document access assumptions, retention needs, and incident paths.
-- Review regional and industry requirements before scaling into more sensitive workflows or markets.
+- least-privilege access model for all production services,
+- separation of customer and internal operational contexts,
+- incident and access logging for material operational events,
+- review of local legal/data requirements before opening second locale.
 
 ## 12. Current and Future Development Needed
 
-- Automated lead-to-prebuild pipeline.
-- Template catalog expansion by region and industry.
-- More automated domain transfer and premium deployment provisioning.
-- Stronger analytics and conversion benchmarking by niche.
+Current priorities:
+
+- finalize package UX and contract-ready terms,
+- harden LiNKbot-to-CRM lead flow and operational handoffs,
+- improve automated provisioning and post-sale checklist enforcement,
+- strengthen package usage telemetry for overage and support analytics.
+
+Future priorities:
+
+- broader template coverage by niche,
+- tighter conversion and funnel analytics by package,
+- stronger automated domain and migration tooling.
 
 ## 13. Roadmap Phases
 
 Phase 1:
 
-- define scope and minimum viable operating model
-- ship the first usable version or service path
-- collect real operational data
+- launch first locale with package discipline,
+- close first paying cohort and validate delivery loop.
 
 Phase 2:
 
-- remove the highest-friction delivery bottlenecks
-- improve economics through reuse and automation
-- expand to the next most logical market or package layer
+- optimize support, margin, and overage recovery,
+- improve conversion via template and process refinements.
 
 Phase 3:
 
-- scale selectively based on conversion, retention, and margin
-- add deeper productization or platform features only where justified
-- capture a stronger strategic moat for the studio
+- open second locale after first reaches 20 active sites,
+- scale only package lanes with stable quality and economics.
 
 ## 14. Acceptance Criteria
 
-- The line can be explained, sold, delivered, and supported using documented workflows.
-- The line has measurable KPIs for quality, revenue, and support burden.
-- The line can be run without relying on undocumented founder memory.
-- The line fits LiNKtrend's wider architecture and financial logic.
+- all three packages can be explained, sold, delivered, and supported with documented workflows,
+- package economics and support burden are measurable by dashboard,
+- LiNKbot-driven lead and CRM workflow is operating reliably,
+- overage and capacity-event policies are operationally enforceable.
 
 ## 15. Open Questions
 
-- Which scope elements should remain internal-only versus customer-facing?
-- Which features or packages deserve investment first based on margin and strategic leverage?
-- What regional or vertical localization work is essential for the first scaled rollout?
-- What must be automated next to preserve the factory model as demand grows?
+- which vertical templates should receive first expansion investment,
+- where to set strict customization boundaries by package,
+- what SLA and response-time guarantees should be formalized per package tier.

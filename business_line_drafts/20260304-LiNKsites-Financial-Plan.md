@@ -3,138 +3,145 @@
 Status: Draft for review  
 Business line: LiNKsites  
 Document type: Financial Plan  
-Planning basis: This draft uses a consistent structure informed by current business-plan, SOP, financial-planning, strategy-execution, and PRD best practices, then adapts them to LiNKtrend's operating model and current repository context.
+Planning basis: Updated to approved LiNKsites package pricing, cost, and margin assumptions.
 
 ## 1. Financial Purpose
 
-The purpose of this document is to define how LiNKsites should make money, what it should cost to operate, how it should be budgeted, what its growth targets are, and what financial controls should govern scale decisions.
+Define the operating economics of LiNKsites so pricing, growth, and scaling decisions stay controlled and margin-positive.
 
 ## 2. Revenue Strategy
 
-- One-time setup and transfer fees.
-- Recurring hosting and maintenance fees.
-- Premium isolation fees.
-- Scoped add-ons and upsells into adjacent services.
+LiNKsites uses two revenue layers:
 
-Revenue design rules:
+- one-time setup revenue from template-based site delivery,
+- recurring managed-hosting and operations revenue by package.
 
-- Prefer recurring revenue where possible.
-- Use one-time setup or transfer fees to recover launch and onboarding effort.
-- Keep pricing aligned to customer value, not just internal cost.
-- Avoid low-margin work that blocks reuse or forces ongoing manual intervention.
+Additional revenue layers:
 
-## 3. Pricing and Packaging
+- usage overages,
+- scoped add-ons and service expansions,
+- cross-sell into LiNKautowork and LiNKbots.
 
-- Standard site planning anchor: about USD 500 to 1,000 one-time plus USD 49 to 79 per month.
-- Premium site planning anchor: about USD 1,500 to 3,000 one-time plus USD 149 to 249 per month.
-- Pricing must remain materially below mainstream managed-site competitors while preserving margin through shared infrastructure.
+## 3. Approved Package Pricing
 
-Packaging principles:
+Standard:
 
-- Use a small number of default packages first.
-- Treat custom work as a separate pricing path, not as an entitlement inside standard packages.
-- Review pricing quarterly against margin, conversion rate, and support cost.
+- setup: $300,
+- recurring: $14.99/month (1-year) or $11.99/month effective (2-year).
 
-## 4. Startup and Capital Needs
+Premium:
 
-- Low incremental startup cost because company sites and client sites share the same hosting base.
-- Primary startup costs are deployment hardening, DNS and SSL setup, template QA, and sales materials.
-- Margin protection depends on keeping custom work constrained.
+- setup: $750,
+- recurring: $29.99/month (1-year) or $24.99/month effective (2-year).
 
-Funding logic:
+Enterprise:
 
-- Use the lowest capital path that still allows reliable delivery.
-- Favor shared infrastructure when it does not compromise security or quality.
-- Do not front-load scale costs before demand is proven.
+- setup: $1,999,
+- recurring: $249.99/month (1-year) or $199.99/month effective (2-year).
 
-## 5. Operating Cost Structure
+## 4. Cost Structure Baseline
 
-- Shared DigitalOcean VPS cost should be allocated across both internal and client sites.
-- Premium deployments should carry their own isolation margin.
-- Monitoring, SSL, DNS, and support time must be tracked monthly.
+Shared management allocation for LiNKsites:
 
-Cost-control rules:
+- DigitalOcean base allocation: $7.92/month,
+- weekly backup allocation: $4.80/month,
+- Supabase allocation: $6.25/month,
+- total management layer allocation: $18.97/month.
 
-- Track fixed and variable costs separately.
-- Set budget thresholds for compute, model spend, hosting, support, and maintenance.
-- Tie any major recurring spend increase to a revenue or quality justification.
+Recurring internal cost per site:
 
-## 6. Unit Economics and Margin Logic
+- Standard: $1.72/site/month,
+- Premium: $4.10/site/month,
+- Enterprise: about $37.30/site/month (includes average domain allowance of about $15/year).
 
-Unit-economics expectations for LiNKsites:
+Estimated AI token build cost per site:
 
-- Every offer should have a defined setup effort, recurring support burden, and expected gross margin.
-- High-reuse offers should expand margin over time as templates, skills, and automations improve.
-- Offers that remain labor-intensive should be repriced, restructured, or retired.
+- Standard: about $0.45,
+- Premium: about $1.85,
+- Enterprise: about $4.90.
 
-## 7. 12-Month Base Case Targets
+## 5. Recurring Margin Logic
 
-- Close the first 4 to 6 customers within 90 days.
-- Reach 20 plus paying sites inside 12 months.
-- Convert a meaningful share of site customers into automation clients.
+Recurring gross margin by package:
 
-Base-case financial interpretation:
+- Standard: 88.53% (1-year), 85.65% (2-year),
+- Premium: 86.33% (1-year), 83.59% (2-year),
+- Enterprise: 85.08% (1-year), 81.35% (2-year).
 
-- Month 1 to 3 should focus on getting the first paying proof points and validating margin assumptions.
-- Month 4 to 6 should focus on repeatability, retention, and support-cost control.
-- Month 7 to 12 should focus on scaling only the offers that preserve contribution margin and strategic leverage.
+Recurring monthly gross profit per site:
 
-## 8. Upside and Downside Scenarios
+- Standard: $13.27 (1-year), $10.27 (2-year),
+- Premium: $25.89 (1-year), $20.89 (2-year),
+- Enterprise: $212.69 (1-year), $162.69 (2-year).
 
-Upside case:
+## 6. Overage Economics
 
-- conversion rates exceed plan because the value proposition is obvious and the delivery path is fast
-- shared infrastructure produces better-than-expected margin
-- cross-sell into other LiNKtrend services increases revenue per customer
+Core overage charges:
 
-Downside case:
+- outbound transfer: $0.013 per GiB,
+- DB egress: $0.117 per GB,
+- DB size: $0.1625 per GB-month,
+- DB storage: $0.0273 per GB-month,
+- DB MAU where applicable: $0.004225 per MAU-month.
 
-- support cost rises because the product is not stable enough
-- pricing is too low relative to the hidden operating burden
-- the line generates revenue but weak strategic leverage because work is too custom
+Service overages:
 
-## 9. Budget Allocation Rules
+- Premium automations: $0.010 per execution,
+- Premium AI responses: $0.008 per response,
+- Premium extra blog posts: $24 per post,
+- Enterprise automations: $0.008 per execution,
+- Enterprise AI responses: $0.006 per response,
+- Enterprise extra blog posts: $20 per post.
 
-- Protect spend on reliability, documentation, and QA before adding discretionary growth spend.
-- Route discretionary investment toward the bottleneck with the highest commercial leverage.
-- Do not let marketing, infrastructure, or model spend expand faster than proven unit economics.
+Capacity event rule:
 
-## 10. Financial KPIs and Controls
+- CPU and RAM are not treated as unit-metered overages.
+- If sustained pressure requires resize or migration, incremental provider cost plus 30% can be charged prorated until package alignment is complete.
 
-- Prebuilt sites created per week.
-- Outreach to close ratio.
-- Setup fees collected.
-- Monthly churn.
-- Upgrade rate into automation or premium hosting.
-- Average gross margin per site.
+## 7. Capital and Budget Guidance
 
-Additional finance controls:
+Financial control priorities:
 
-- monthly revenue by package or asset
-- gross margin by package or asset
-- support hours or support cost per customer
-- hosting, model, and workflow execution cost by product line where practical
-- customer acquisition source and payback period where applicable
+- protect shared reliability first (hosting, backups, QA discipline),
+- treat model/API usage as measured operating spend, not uncontrolled variable cost,
+- tie new recurring spend to proven customer growth and package performance.
 
-## 11. Reinvestment Policy
+## 8. 12-Month Financial Targets
 
-Reinvestment order:
+Target outcomes:
 
-1. stabilize delivery quality and reduce failure or support cost
-2. improve reuse through templates, automations, and skills
-3. increase distribution only after the offer converts and retains reliably
-4. expand into new markets, verticals, or product layers once the core economics are proven
+- first 4 to 6 paying clients within 90 days,
+- 20 plus active sites in first locale before second locale expansion,
+- package mix that keeps blended gross margin high while preserving support quality.
 
-## 12. Financial Risks and Trigger Points
+Illustrative recurring contribution model:
 
-- Scope creep through one-off design requests.
-- Shared deployment errors affecting multiple client sites.
-- Underpricing managed support.
-- Slow outreach throughput.
+- keep Standard as throughput and entry path,
+- use Premium to increase ARPU with bounded support complexity,
+- use Enterprise for high-margin dedicated service with strict scope and SLA controls.
 
-Trigger points:
+## 9. Financial KPIs and Controls
 
-- Pause or reprice any package with persistent low or negative gross margin.
-- Pause scaling if support burden rises faster than recurring revenue.
-- Review product fit immediately if conversion is low despite a clear offer and active outreach.
-- Kill or redesign lines that cannot be standardized enough to fit LiNKtrend's model.
+- setup revenue collected per month,
+- recurring revenue by package,
+- gross margin by package,
+- support burden by package,
+- overage recovered versus overage incurred,
+- churn and retention by package and cohort,
+- payback period by acquisition source.
+
+## 10. Reinvestment Policy
+
+Reinvest in this order:
+
+1. reliability and quality controls,
+2. delivery automation and reusable templates,
+3. sales throughput systems and CRM instrumentation,
+4. locale expansion after customer-density trigger is achieved.
+
+## 11. Risk Controls
+
+- Reject custom work that breaks package economics.
+- Reprice or tighten packages if support burden rises faster than recurring margin.
+- Pause expansion if first-locale operations are unstable.
+- Keep cost attribution visible by package to prevent hidden margin erosion.

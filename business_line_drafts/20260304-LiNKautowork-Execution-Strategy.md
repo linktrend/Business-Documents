@@ -13,8 +13,8 @@ The strategic objective for LiNKautowork is to use internal-first automation tem
 
 By the end of the first 12 months, this business line should:
 
-- Standardize the first internal automation set inside 30 days.
-- Package the first 3 to 5 external offers within 90 days.
+- Build and QA the first 12 phase-1 and phase-2 automations inside 30 days and start internal hardening.
+- Package and publish the first external credit-priced automation catalog within 90 days.
 - Reach 10 or more recurring automation customers within 12 months.
 
 ## 3. Constraints and Guiding Principles
@@ -29,6 +29,7 @@ By the end of the first 12 months, this business line should:
 - Internal workflow capture.
 - Industry research and template sourcing.
 - QA and exception testing.
+- Credit metering and pricing controls.
 - Offer packaging and website merchandising.
 - Monitoring, support, and iteration.
 
@@ -38,6 +39,7 @@ First 30 days should focus on:
 
 - locking the minimum viable offer and operating scope
 - confirming the core build and delivery path
+- building and QA testing 12 automations across phase 1 and phase 2
 - assembling documentation, sales support, and release checklists
 - standing up the first measurable KPI dashboard for this line
 
@@ -48,6 +50,7 @@ Days 31 to 90 should focus on:
 - getting the first real users, customers, or internal production usage
 - proving that the delivery loop is repeatable
 - collecting support, quality, and margin data
+- launching external bundles and PAYG with credit metering
 - tightening packaging and pricing based on evidence, not preference
 
 ## 7. 6 to 12 Month Plan
@@ -66,7 +69,7 @@ Critical dependencies:
 - shared DigitalOcean hosting and deployment discipline where applicable
 - shared QA and documentation standards
 - founder or executive decisions on scope, pricing, and kill thresholds
-- support from LiNKtrend Media, LiNKskills, LiNKautowork, or LiNKbots depending on the line
+- support from LiNKtrend Media, LiNKskills, and LiNKbots where relevant
 
 ## 9. Decision Gates
 
@@ -74,7 +77,7 @@ Standard decision gates:
 
 1. Gate 1: is the minimum viable offer clearly defined and deliverable?
 2. Gate 2: does the first real usage validate the core problem and solution fit?
-3. Gate 3: do the economics and support burden justify repeatability?
+3. Gate 3: do credit economics stay above the 80% gross-margin floor with acceptable support burden?
 4. Gate 4: should the line be scaled, held steady, redesigned, or cut back?
 
 ## 10. Operating Cadence and Reporting
@@ -103,6 +106,6 @@ Default response pattern:
 ## 12. Immediate Next Actions
 
 - Confirm the owner, backlog, and KPI baseline for the line.
-- Finalize the minimum viable offer and support boundaries.
+- Finalize the published credit bundles, PAYG rate, and tool-credit policy.
 - Prepare the first delivery checklist and release gate.
 - Schedule the first 30-day review before scaling effort starts.

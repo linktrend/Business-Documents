@@ -11,10 +11,10 @@ The purpose of this document is to define how LiNKautowork should make money, wh
 
 ## 2. Revenue Strategy
 
-- One-time setup and adaptation fees.
-- Monthly managed workflow fees.
+- Shared credit economy with LiNKskills.
+- Recurring bundle subscriptions plus PAYG top-ups.
+- Optional implementation fees for non-standard integrations.
 - Bundled upsells from LiNKsites and LiNKbots.
-- Later-stage vertical packages sold through the company site and a dedicated LiNKautowork site.
 
 Revenue design rules:
 
@@ -25,9 +25,20 @@ Revenue design rules:
 
 ## 3. Pricing and Packaging
 
-- Starter service planning anchor: about USD 500 to 1,000 one-time plus USD 99 to 199 per month.
-- Growth stack planning anchor: about USD 1,500 to 3,000 one-time plus USD 249 to 599 per month.
-- Pricing should stay meaningfully below bespoke automation consultancies while protecting margin through reuse.
+Approved credit pricing:
+
+- Internal COGS baseline: $0.012 per credit.
+- Standard: 2,500 credits at $199.99 per month (about $0.080 per credit, about 85.0% gross margin).
+- Premium: 10,000 credits at $699.99 per month (about $0.070 per credit, about 82.9% gross margin).
+- Enterprise: 25,000 credits at $1,624.99 per month (about $0.065 per credit, about 81.5% gross margin).
+- PAYG: $0.10 per credit (about 88.0% gross margin).
+- Minimum gross margin threshold: 80% on all published packages.
+
+Credit metering rule:
+
+- total billed credits = execution credits + tool credits
+- tool credits scale with direct provider cost (LLM, OCR, enrichment, API calls) plus reliability buffer
+- overage credits in bundles are billed at the customer's package-effective rate
 
 Packaging principles:
 
@@ -64,14 +75,15 @@ Cost-control rules:
 
 Unit-economics expectations for LiNKautowork:
 
-- Every offer should have a defined setup effort, recurring support burden, and expected gross margin.
+- Every offer should have defined execution-credit and tool-credit expectations.
+- Every offer should maintain at least 80% gross margin at expected volume.
 - High-reuse offers should expand margin over time as templates, skills, and automations improve.
 - Offers that remain labor-intensive should be repriced, restructured, or retired.
 
 ## 7. 12-Month Base Case Targets
 
-- Standardize the first internal automation set inside 30 days.
-- Package the first 3 to 5 external offers within 90 days.
+- Build and QA the first 12 automations for phase 1 and phase 2 within 30 days and move into internal hardening.
+- Publish the first external credit-priced automation catalog within 90 days.
 - Reach 10 or more recurring automation customers within 12 months.
 
 Base-case financial interpretation:
@@ -107,6 +119,9 @@ Downside case:
 - Workflow success rate.
 - Time to diagnose failed runs.
 - Automation upsell rate from LiNKsites.
+- Credits sold by tier and PAYG share.
+- Blended gross margin per credit.
+- Tool-credit share versus execution-credit share.
 - Gross margin by automation package.
 
 Additional finance controls:

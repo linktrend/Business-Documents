@@ -47,9 +47,9 @@ SMBs often know they have repetitive admin and coordination pain, but they do no
 
 ## 7. Primary Use Cases
 
-- Starter managed automation service for one or two workflows.
-- Growth automation stacks by industry.
-- Localized industry best-practice automation bundles.
+- Phase 1 internal operations automations for LiNKtrend execution.
+- Phase 2 content and publishing automations for LiNKtrend Media and LiNKsites support.
+- Phase 3 external SMB workflow bundles by vertical.
 - Ongoing managed maintenance and exception support.
 
 ## 8. Functional Requirements
@@ -68,6 +68,7 @@ Line-specific workflow requirements:
 - Modify and harden workflows to LiNKtrend standards.
 - Run reliability, exception-path, and credential tests.
 - Deploy as a managed service and monitor execution.
+- Meter every run as execution credits plus tool credits.
 
 ## 9. Non-Functional Requirements
 
@@ -92,6 +93,13 @@ Shared integration expectations:
 - Use LiNKbots where agent orchestration or digital labor is required.
 - Use DigitalOcean as the default hosting base unless a clear reason exists to break that rule.
 
+Commercial architecture requirements:
+
+- Use a shared credit currency with LiNKskills.
+- Keep internal COGS baseline at $0.012 per credit.
+- Maintain published package margin floor of at least 80%.
+- Support Standard (2,500 credits), Premium (10,000 credits), Enterprise (25,000 credits), and PAYG billing.
+
 ## 11. Data, Security, and Compliance
 
 - Protect credentials, tenant data, and internal logic using centralized controls.
@@ -110,21 +118,21 @@ Shared integration expectations:
 
 Phase 1:
 
-- define scope and minimum viable operating model
-- ship the first usable version or service path
-- collect real operational data
+- build and QA first 12 automations for internal operations and CEO support
+- deploy to internal production with reliability monitoring
+- collect operational and cost telemetry
 
 Phase 2:
 
-- remove the highest-friction delivery bottlenecks
-- improve economics through reuse and automation
-- expand to the next most logical market or package layer
+- ship LiNKtrend Media and LiNKsites content automation set
+- publish external credit-priced offers through web channels
+- improve economics through tool-credit controls and template reuse
 
 Phase 3:
 
 - scale selectively based on conversion, retention, and margin
-- add deeper productization or platform features only where justified
-- capture a stronger strategic moat for the studio
+- expand into SMB administrative workflow verticals
+- add deeper productization features only where justified by usage and margin data
 
 ## 14. Acceptance Criteria
 

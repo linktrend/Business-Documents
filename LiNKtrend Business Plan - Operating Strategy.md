@@ -113,16 +113,35 @@ This layer creates long-term upside.
 
 #### What It Is
 
-LiNKsites is the website factory. It is the most launch-ready short-term revenue engine in the current stack.
+LiNKsites is the website factory and the first cash-flow wedge of the studio.
 
-It follows a "build first, sell later" model:
+It is sold as a bundled outcome, not only as raw hosting:
+
+- prebuilt website delivery from approved templates,
+- managed hosting and operations,
+- automation-ready operating layer for upsells.
+
+The operating motion is "build first, sell from proof":
 
 - identify SMBs with weak digital presence,
-- generate a full site fully ready before the sale,
-- close the client around a finished asset,
-- transfer ownership to the client for a fee and a hosting/maintenance (monthly/annual fee),
-- keep most clients on a shared platform,
-- upsell frontend deployment isolation and other services (LiNKautowork, LiNKbots, LiNKskills) .
+- generate a finished site from a template before the sale,
+- close the client around a working asset,
+- transfer ownership and keep the client on managed operations,
+- upsell automations and higher-isolation hosting where justified.
+
+#### Factory and Sales Mechanics
+
+LiNKsites uses a template-first production system orchestrated by LiNKbots.
+
+For this plan, a LiNKbot means an internal AI worker agent that executes repeatable workflows under human governance.
+
+In LiNKsites, LiNKbots are used to:
+
+- clone and adapt approved templates into client-ready sites,
+- run delivery checklists and deployment preparation,
+- research and qualify leads,
+- push leads into CRM,
+- trigger follow-up tasks for humans or other LiNKbots to close packages.
 
 #### Current Asset Status
 
@@ -143,19 +162,32 @@ The repo already contains:
 - domain attach scripts,
 - deployment guides,
 - pricing and packaging SOPs,
-- standard vs premium operating model.
+- standard vs premium operating model foundations.
 
-#### Technology Model
+#### Technology and Hosting Model
 
 LiNKsites is designed as a multi-tenant website platform, not as a one-repo-per-client agency workflow.
 
 Core architecture:
 
-- shared Next.js frontend for prebuilt sites and standard clients,
+- one control-plane droplet for CMS and core operations,
+- runtime droplets for shared client sites,
+- dedicated runtime isolation for enterprise-tier clients,
 - central Payload CMS for all sites,
-- Supabase-hosted Postgres for CMS data,
-- hostname to `siteId` resolution through a domain mapping layer,
-- optional dedicated frontend deployment for premium clients while keeping the same CMS backend.
+- Supabase-backed data layer for CMS and operating services,
+- hostname-to-tenant resolution through a domain mapping layer.
+
+Control-plane allocation model for LiNKsites:
+
+- DigitalOcean base allocation: $7.92 per month,
+- weekly backup allocation: $4.80 per month,
+- shared Supabase allocation: $6.25 per month,
+- total LiNKsites management layer: $18.97 per month.
+
+Locale sequencing rule:
+
+- launch with one locale (US or Japan),
+- open a second locale only after one region reaches 20 active sites.
 
 This architecture matters strategically because it allows:
 
@@ -163,17 +195,56 @@ This architecture matters strategically because it allows:
 - low hosting costs for most clients,
 - centralized maintenance,
 - faster onboarding,
-- better margin control.
+- better margin control,
+- clear gating to dedicated runtime only where needed.
 
 #### Offer Structure
 
-Recommended launch packaging:
+Approved launch packaging:
 
-- Standard site: shared runtime, template-led delivery, approximately $500-$1,000 one-time and $49-$79 per month.
-- Premium site: dedicated frontend isolation on DigitalOcean, approximately $1,500-$3,000 one-time and $149-$249 per month.
-- Add-on work: limited scoped modifications quoted separately.
+Standard package:
 
-The monthly fee should remain substantially cheaper than mainstream managed website competitors while still protecting margin. Because LiNKtrend is already operating its own sites and intends to keep hosting consolidated on DigitalOcean, shared-VPS economics make low recurring pricing possible. The standard monthly fee should therefore be positioned as low-cost managed hosting and light maintenance on shared infrastructure, while premium clients pay materially more for dedicated frontend isolation.
+- site profile: no blog, single-page or limited-page SMB site, lightweight media.
+- recurring price: $14.99 per month (1-year) or $11.99 per month effective on 2-year.
+- setup price: $300.
+- internal recurring cost: $1.72 per site per month.
+- recurring gross margin: 88.53% (1-year) and 85.65% (2-year).
+- estimated token build cost per site (mid-cost coding plus vision model): about $0.45.
+- included quotas: 200 GB outbound transfer, 4 GB frontend disk, 3.125 GB DB egress, 100 MB DB size, 1.25 GB DB storage, 1,250 monthly unique visitors.
+
+Premium package:
+
+- site profile: standard plus more pages, richer media, blog enabled, enhanced conversion design blocks.
+- recurring price: $29.99 per month (1-year) or $24.99 per month effective on 2-year.
+- setup price: $750.
+- internal recurring cost: $4.10 per site per month.
+- recurring gross margin: 86.33% (1-year) and 83.59% (2-year).
+- estimated token build cost per site (mid-cost coding plus vision model): about $1.85.
+- included quotas: 200 GB outbound transfer, 10 GB frontend disk, 3.125 GB DB egress, 100 MB DB size, 1.25 GB DB storage, 5,000 monthly unique visitors.
+- included service allowances: 300 automation executions per month, 150 AI response actions per month, 2 managed blog posts per quarter.
+
+Enterprise package:
+
+- site profile: premium plus dedicated runtime isolation, domain included, priority support, higher customization and service layer.
+- recurring price: $249.99 per month (1-year) or $199.99 per month effective on 2-year.
+- setup price: $1,999.
+- internal recurring cost: about $37.30 per site per month.
+- recurring gross margin: 85.08% (1-year) and 81.35% (2-year).
+- internal enterprise cost includes an average domain allowance of about $15 per year.
+- estimated token build cost per site (mid-cost coding plus vision model): about $4.90.
+- included quotas baseline: dedicated runtime (80 GB disk and 4 TB transfer baseline), 10 GB DB egress, 500 MB DB size, 5 GB DB storage, 20,000 monthly unique visitors.
+- included service allowances: 1,500 automation executions per month, 500 AI response actions per month, 6 managed blog posts per quarter, on-site support chat operations.
+
+Overage and capacity policies for all packages:
+
+- outbound transfer: $0.013 per GiB,
+- DB egress: $0.117 per GB,
+- DB size: $0.1625 per GB-month,
+- DB storage: $0.0273 per GB-month,
+- DB MAU billing metric where applicable: $0.004225 per MAU-month.
+- premium allowance overages: automations $0.010 per execution, AI responses $0.008 per response, additional blog posts $24 per post.
+- enterprise allowance overages: automations $0.008 per execution, AI responses $0.006 per response, additional blog posts $20 per post.
+- CPU and RAM are treated as capacity events, not unit overages; sustained pressure triggers resize or migration and may apply prorated incremental provider cost plus 30%.
 
 #### Role in the Studio
 
@@ -187,9 +258,10 @@ LiNKsites should be the first revenue engine because:
 
 #### 90-Day Objective
 
-- close first 4-6 paying sites,
-- standardize one primary template vertical,
-- use site delivery as the main door-opener for LiNKautowork upsells.
+- close first 4-6 paying sites with package discipline,
+- standardize one primary template vertical and one backup vertical,
+- run CRM-driven outreach where LiNKbots feed leads and humans or LiNKbots execute follow-up,
+- use site delivery as the main door-opener for LiNKautowork and later bot upsells.
 
 ### 4.2 LiNKautowork
 
@@ -241,11 +313,24 @@ Target architecture:
 
 #### Offer Structure
 
-Recommended initial packaging:
+Approved pricing model:
 
-- Starter automation service: 1-2 standardized workflows, approximately $500-$1,000 one-time and $99-$199 per month.
-- Growth automation stack: multi-step operational workflows, approximately $1,500-$3,000 one-time and $249-$599 per month.
-- Later-stage packaged offers: managed industry workflow bundles sold through the company website and a dedicated automation website, delivered as a service that feels custom even when the underlying automation is standardized.
+- Shared credit economy with LiNKskills.
+- Internal COGS baseline: $0.012 per credit.
+- Tool-intensive runs consume additional tool credits based on direct provider cost.
+
+Approved bundles:
+
+- Standard: 2,500 credits for $199.99 per month (about $0.080 per credit, about 85.0% gross margin).
+- Premium: 10,000 credits for $699.99 per month (about $0.070 per credit, about 82.9% gross margin).
+- Enterprise: 25,000 credits for $1,624.99 per month (about $0.065 per credit, about 81.5% gross margin).
+- PAYG (no bundle): $0.10 per credit (about 88.0% gross margin).
+
+Credit charging rule:
+
+- total credits = execution credits + tool credits.
+- tool credits are calculated from direct tool cost with a reliability buffer so high-cost runs (model, enrichment, third-party APIs) cannot destroy margin.
+- bundle overages are billed at the package effective credit rate; no-bundle usage is billed at PAYG rate.
 
 #### Role in the Studio
 
@@ -258,8 +343,9 @@ LiNKautowork is important because it does three jobs at once:
 #### 90-Day Objective
 
 - standardize the internal workflows needed to run the venture studio first,
-- convert those into the first commercial templates,
-- research and package automations for multiple SMB categories in parallel,
+- complete and harden 12 phase-1 and phase-2 automations for internal use and packaging,
+- convert those into the first commercial templates and credit-priced offers,
+- research and package automations for multiple SMB categories in parallel for phase 3,
 - publish those offers through the company website and a dedicated LiNKautowork website,
 - use LiNKsites deals as the primary source of early automation customers while also allowing direct standalone automation sales.
 
@@ -617,16 +703,17 @@ Implication:
 
 ### 7.1 Initial Target Markets
 
-LiNKtrend should launch in multiple markets at the same time rather than sequencing them too slowly.
+LiNKsites launch should start with one active locale to protect execution quality and unit economics.
 
-Initial target markets:
+Initial launch locale:
 
-- United States
-- United Kingdom
-- Taiwan
-- Costa Rica
+- United States or Japan (choose one and execute first)
 
-The operating logic is to reuse the same production stack across several markets while localizing offers, outreach, content, and automations as needed. The best early customers are still SMB service businesses where weak digital presence and weak operational workflows are obvious.
+Expansion rule:
+
+- open a second locale when one region reaches 20 active LiNKsites customers
+
+This sequencing keeps operations controlled while preserving the multi-region strategy. The best early customers remain SMB service businesses where weak digital presence and weak operational workflows are obvious.
 
 ### 7.2 Initial Ideal Customer Profiles
 
@@ -680,9 +767,9 @@ Primary objective: make the studio commercially operable.
 
 Required outputs:
 
-1. Finalize LiNKsites launch package, pricing, outreach process, and delivery checklist.
+1. Finalize and publish LiNKsites Standard, Premium, and Enterprise package terms, quotas, overages, and contract language.
 2. Stand up the minimum production hosting for sites, CMS, and automations.
-3. Define the first three LiNKautowork productized automations.
+3. Define and ship the first 12 LiNKautowork automations across phase 1 (operations) and phase 2 (content operations).
 4. Select the first internal LiNKskills package candidates and logic-engine backlog.
 5. Define the internal LiNKbots future repo plan and separate client-template strategy.
 6. Prepare sales material, prebuilt site examples, case-study-style examples, and offer pages.
@@ -785,7 +872,7 @@ These are intentionally conservative ranges. The business only works if revenue 
 ### 9.4 Revenue Model by Business Line
 
 - LiNKsites: setup fees plus monthly recurring revenue, immediate cash flow, first revenue engine.
-- LiNKautowork: setup fees plus monthly recurring revenue, immediate to short-term ARPU expansion and internal efficiency.
+- LiNKautowork: recurring credit bundles plus PAYG usage, immediate to short-term ARPU expansion and internal efficiency.
 - Client LiNKbots: monthly recurring revenue plus setup or pilot fees, short-term higher-ticket recurring revenue.
 - LiNKskills: internal enablement immediately, then subscription, API, and package access within the first 90 days as the product hardens.
 - LiNKapps: subscription revenue or exit proceeds, medium- to long-term equity and upside.
@@ -793,12 +880,15 @@ These are intentionally conservative ranges. The business only works if revenue 
 
 ### 9.5 Recommended Pricing Anchors
 
-These are planning anchors and can be adjusted per market.
+These are approved planning anchors for launch and should only be changed by explicit pricing review.
 
-- LiNKsites Standard: about $500-$1,000 setup plus $49-$79 per month.
-- LiNKsites Premium: about $1,500-$3,000 setup plus $149-$249 per month.
-- LiNKautowork Starter: about $500-$1,000 setup plus $99-$199 per month.
-- LiNKautowork Growth: about $1,500-$3,000 setup plus $249-$599 per month.
+- LiNKsites Standard: $300 setup plus $14.99 per month (1-year) or $11.99 per month effective on 2-year.
+- LiNKsites Premium: $750 setup plus $29.99 per month (1-year) or $24.99 per month effective on 2-year.
+- LiNKsites Enterprise: $1,999 setup plus $249.99 per month (1-year) or $199.99 per month effective on 2-year.
+- LiNKautowork Standard Bundle: 2,500 credits for $199.99 per month.
+- LiNKautowork Premium Bundle: 10,000 credits for $699.99 per month.
+- LiNKautowork Enterprise Bundle: 25,000 credits for $1,624.99 per month.
+- LiNKautowork PAYG: $0.10 per credit.
 - LiNKbot pilot or managed worker: about $1,000-$2,000 setup plus $1,000-$3,500 per month.
 - LiNKskills pilot access: about $99-$999 per month depending on bundle depth.
 
@@ -823,13 +913,15 @@ Base-case path:
 
 An example month that satisfies the profit target:
 
-- 20 standard sites at $59 generates about $1,180 MRR.
-- 8 premium sites at $199 generates about $1,592 MRR.
-- 10 automation clients at $299 generates about $2,990 MRR.
+- 30 standard sites at $14.99 generates about $450 MRR.
+- 15 premium sites at $29.99 generates about $450 MRR.
+- 2 enterprise sites at $249.99 generates about $500 MRR.
+- 12 LiNKautowork Standard bundle clients at $199.99 generates about $2,400 MRR.
+- 1 LiNKautowork Premium bundle client at $699.99 generates about $700 MRR.
 - 4 bot clients at $2,000 generates about $8,000 MRR.
 - 3 LiNKskills customers at $399 generates about $1,197 MRR.
 - 1 small app at $1,000 MRR generates about $1,000 MRR.
-- total recurring revenue in this example is about $15,959 MRR.
+- total recurring revenue in this example is about $14,697 MRR.
 
 At that point, if monthly operating cost remains in the $3,500-$4,500 range and setup/add-on cash continues, stable monthly profit above USD 10,000 becomes realistic. The exact mix can vary, but the principle is the same: the profit target should come from diversified recurring revenue, not from one-off hero sales.
 
@@ -863,12 +955,18 @@ At that point, if monthly operating cost remains in the $3,500-$4,500 range and 
 - setup fee collected
 - monthly churn
 - percentage of clients upgraded to automation or premium
+- package mix across standard, premium, and enterprise
+- overage recovery rate versus provider overage cost
+- second-locale trigger progress (active sites in first locale)
 
 ### 10.3 LiNKautowork KPIs
 
-- workflows productized
-- workflows deployed
-- automation uptime
+- workflows productized and production-ready
+- workflows deployed and active usage by phase (phase 1, phase 2, phase 3)
+- automation uptime and failure rate by workflow
+- credits sold by bundle tier and PAYG mix
+- blended gross margin per credit (target: at least 80%)
+- tool-credit share versus execution-credit share
 - automation upsell rate from site clients
 
 ### 10.4 LiNKbots KPIs

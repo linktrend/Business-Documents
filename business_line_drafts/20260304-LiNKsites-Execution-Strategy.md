@@ -3,106 +3,103 @@
 Status: Draft for review  
 Business line: LiNKsites  
 Document type: Execution Strategy  
-Planning basis: This draft uses a consistent structure informed by current business-plan, SOP, financial-planning, strategy-execution, and PRD best practices, then adapts them to LiNKtrend's operating model and current repository context.
+Planning basis: Updated to approved package architecture, pricing, and launch sequencing.
 
 ## 1. Strategic Objective
 
-The strategic objective for LiNKsites is to turn repeatable website delivery into immediate cash flow by building fully ready sites before the sale and transferring them into managed production quickly.
+Turn template-based website delivery into repeatable cash flow by combining:
 
-## 2. Desired End State
+- pre-built site production,
+- managed recurring hosting packages,
+- LiNKbot-driven lead and CRM throughput,
+- controlled upsells into LiNKautowork and LiNKbots.
 
-By the end of the first 12 months, this business line should:
+## 2. Operating End State (12 Months)
 
-- Close the first 4 to 6 customers within 90 days.
-- Reach 20 plus paying sites inside 12 months.
-- Convert a meaningful share of site customers into automation clients.
+- 20 plus active sites in first locale,
+- second locale opened only after first locale reaches threshold,
+- stable package mix across Standard, Premium, and Enterprise,
+- consistent recurring margin with controlled support load.
 
-## 3. Constraints and Guiding Principles
+## 3. Core Execution Principles
 
-- Keep the business line consistent with LiNKtrend's factory model.
-- Prefer reuse, automation, and governed standards over custom delivery.
-- Scale only after quality, supportability, and gross margin are understood.
-- Use internal operational use where relevant to harden the business line before broader rollout.
+- enforce package boundaries and prevent uncontrolled custom work,
+- keep build and deployment template-first,
+- use LiNKbots for throughput and consistency, with human approval gates,
+- scale geography only after economics and quality are stable.
 
 ## 4. Core Workstreams
 
-- Vertical template refinement.
-- Prospecting and prebuild engine.
-- Delivery operations and QA.
-- Premium deployment automation.
-- Upsell system into LiNKautowork and LiNKbots.
+- template catalog management by vertical,
+- LiNKbot prospecting and CRM enrichment,
+- prebuild and QA workflow,
+- package-based sales and conversion flow,
+- post-sale delivery and support operations,
+- overage and capacity-event governance.
 
-## 5. 30-Day Plan
+## 5. 30-Day Execution Plan
 
-First 30 days should focus on:
+- publish final package definitions, quotas, and contract terms,
+- configure one active launch locale (US or Japan),
+- complete LiNKbot to CRM lead pipeline for first outbound campaigns,
+- lock QA checklists for Standard, Premium, and Enterprise launches,
+- prepare sales collateral presenting Premium first with downgrade/upgrade paths.
 
-- locking the minimum viable offer and operating scope
-- confirming the core build and delivery path
-- assembling documentation, sales support, and release checklists
-- standing up the first measurable KPI dashboard for this line
+## 6. Day 31-90 Execution Plan
 
-## 6. 60 to 90 Day Plan
+- close first 4 to 6 paying LiNKsites clients,
+- maintain package discipline and capture delivery timing data,
+- monitor support burden and margin by package weekly,
+- launch first automation upsells from Standard and Premium cohorts.
 
-Days 31 to 90 should focus on:
+## 7. Month 4-12 Scale Plan
 
-- getting the first real users, customers, or internal production usage
-- proving that the delivery loop is repeatable
-- collecting support, quality, and margin data
-- tightening packaging and pricing based on evidence, not preference
-
-## 7. 6 to 12 Month Plan
-
-Months 4 to 12 should focus on:
-
-- scaling only the successful offers or assets
-- deepening reuse through templates, skills, workflows, and systems
-- building stronger market position in the chosen regions and verticals
-- capturing operational knowledge back into permanent documentation and tooling
+- increase volume only on package lines with clean support metrics,
+- expand top-performing templates and niches,
+- open second locale only after first locale reaches 20 active sites,
+- move selected clients to Enterprise when capacity or support profile requires isolation.
 
 ## 8. Dependencies
 
-Critical dependencies:
-
-- shared DigitalOcean hosting and deployment discipline where applicable
-- shared QA and documentation standards
-- founder or executive decisions on scope, pricing, and kill thresholds
-- support from LiNKtrend Media, LiNKskills, LiNKautowork, or LiNKbots depending on the line
+- DigitalOcean hosting and backup discipline,
+- Payload CMS and Supabase shared data layer,
+- LiNKautowork service allowances and execution pipelines,
+- LiNKbots for lead generation, orchestration, and CRM workflow execution,
+- QA and admin governance for release and financial control.
 
 ## 9. Decision Gates
 
-Standard decision gates:
+1. Gate 1: Are package definitions complete and contract-safe?
+2. Gate 2: Is prebuild-to-close workflow repeatable with measured cycle time?
+3. Gate 3: Are margins and support burden acceptable by package?
+4. Gate 4: Is locale expansion justified by active customer count and operating quality?
 
-1. Gate 1: is the minimum viable offer clearly defined and deliverable?
-2. Gate 2: does the first real usage validate the core problem and solution fit?
-3. Gate 3: do the economics and support burden justify repeatability?
-4. Gate 4: should the line be scaled, held steady, redesigned, or cut back?
+## 10. Operating Cadence
 
-## 10. Operating Cadence and Reporting
-
-Recommended cadence:
-
-- weekly KPI and blocker review
-- biweekly product or service quality review
-- monthly strategy and financial review
-- quarterly pricing, packaging, and roadmap review
+- weekly review: leads, prebuild throughput, close rate, package mix, incidents,
+- biweekly review: delivery quality, support burden, overage behavior,
+- monthly review: margin by package, pricing fitness, capacity events, scaling decisions,
+- quarterly review: template expansion, locale expansion, package optimization.
 
 ## 11. Risk Response Plan
 
-- Scope creep through one-off design requests.
-- Shared deployment errors affecting multiple client sites.
-- Underpricing managed support.
-- Slow outreach throughput.
+Primary risks:
 
-Default response pattern:
+- scope creep from custom requests,
+- support burden drift in Premium and Enterprise,
+- overage leakage where provider cost is not recovered,
+- premature locale expansion.
 
-- contain the issue quickly
-- diagnose the real cause
-- convert the lesson into documentation or system changes
-- avoid repeating the same failure through stronger standards or automation
+Default response:
+
+1. contain service impact,
+2. identify root cause with data,
+3. convert lesson into policy/template/automation,
+4. reprice, tighten scope, or pause expansion if economics degrade.
 
 ## 12. Immediate Next Actions
 
-- Confirm the owner, backlog, and KPI baseline for the line.
-- Finalize the minimum viable offer and support boundaries.
-- Prepare the first delivery checklist and release gate.
-- Schedule the first 30-day review before scaling effort starts.
+- lock first-locale launch decision (US or Japan),
+- finalize package sales and legal language,
+- complete LiNKbot lead workflow and CRM routing playbook,
+- publish first 90-day LiNKsites dashboard with package-level economics.
