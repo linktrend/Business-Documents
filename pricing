@@ -1,0 +1,204 @@
+# LiNKtrend Pricing Master File
+
+Status: approved pricing baseline  
+Last updated: 2026-03-09  
+Scope: consolidated pricing analysis, final prices, internal cost basis, and research references
+
+## 1. Purpose
+
+This file is the single consolidated pricing reference for:
+
+- LiNKsites (website build + hosting bundles)
+- LiNKautowork and LiNKskills (shared credit economy)
+- current planning anchors for other lines where final package design is still evolving
+
+## 2. LiNKsites Pricing Analysis and Final Decisions
+
+## 2.1 Operating and Infrastructure Model Used for Pricing
+
+- LiNKsites runs template-first, multi-tenant architecture.
+- Control plane runs centralized services (CMS and related core services).
+- Shared frontend runtime serves multiple customers per droplet.
+- Enterprise uses dedicated frontend isolation.
+- Supabase is shared in the early stage as part of the multi-line stack.
+- Pricing is set to stay materially cheaper than typical managed alternatives while protecting margin.
+
+## 2.2 Final LiNKsites Packages
+
+### Standard
+
+- Site build setup price: $300
+- Hosting price: $14.99/month (1-year) or $11.99/month effective (2-year)
+- Internal recurring cost basis: $1.72/site/month
+- Recurring gross margin:
+- 1-year: 88.53%
+- 2-year: 85.65%
+- Recurring gross profit per site:
+- 1-year: $13.27/month
+- 2-year: $10.27/month
+- Estimated LLM token build cost per site: about $0.45
+- Included monthly quotas:
+- 200 GB outbound transfer
+- 4 GB frontend disk
+- DB egress 3.125 GB
+- DB size 100 MB
+- DB storage 1.25 GB
+- 1,250 MAU baseline
+
+### Premium
+
+- Site build setup price: $750
+- Hosting price: $29.99/month (1-year) or $24.99/month effective (2-year)
+- Internal recurring cost basis: $4.10/site/month
+- Recurring gross margin:
+- 1-year: 86.33%
+- 2-year: 83.59%
+- Recurring gross profit per site:
+- 1-year: $25.89/month
+- 2-year: $20.89/month
+- Estimated LLM token build cost per site: about $1.85
+- Included monthly quotas:
+- 200 GB outbound transfer
+- 10 GB frontend disk
+- DB egress 3.125 GB
+- DB size 100 MB
+- DB storage 1.25 GB
+- 5,000 MAU baseline
+- Included service allowances:
+- 300 automations/month
+- 150 AI responses/month
+- 2 managed blog posts/quarter
+
+### Enterprise
+
+- Site build setup price: $1,999
+- Hosting price: $249.99/month (1-year) or $199.99/month effective (2-year)
+- Internal recurring cost basis: about $37.30/site/month
+- Recurring gross margin:
+- 1-year: 85.08%
+- 2-year: 81.35%
+- Recurring gross profit per site:
+- 1-year: $212.69/month
+- 2-year: $162.69/month
+- Estimated LLM token build cost per site: about $4.90
+- Internal cost includes average domain allowance: about $15/year
+- Included baseline quotas:
+- Dedicated frontend runtime
+- 80 GB disk and 4 TB transfer baseline
+- DB egress 10 GB
+- DB size 500 MB
+- DB storage 5 GB
+- 20,000 MAU baseline
+- Included service allowances:
+- 1,500 automations/month
+- 500 AI responses/month
+- 6 managed blog posts/quarter
+- on-site support chat operations
+
+## 2.3 LiNKsites Overage and Capacity Policy (Final)
+
+Core overage rates:
+
+- Outbound transfer: $0.013 per GiB
+- DB egress: $0.117 per GB
+- DB database size: $0.1625 per GB-month
+- DB storage size: $0.0273 per GB-month
+- DB MAU metric where applicable: $0.004225 per MAU-month
+
+Service overages:
+
+- Premium automations: $0.010 per execution
+- Premium AI responses: $0.008 per response
+- Premium extra blog posts: $24 each
+- Enterprise automations: $0.008 per execution
+- Enterprise AI responses: $0.006 per response
+- Enterprise extra blog posts: $20 each
+
+Capacity event rule:
+
+- CPU and RAM are not unit-metered overages on Droplets.
+- If sustained resource pressure forces resizing or migration, LiNKsites may apply a capacity surcharge equal to incremental provider cost plus 30%, prorated from resize date until migration or normalization is completed.
+
+## 3. Shared Credit Economy (LiNKautowork + LiNKskills)
+
+## 3.1 Pricing Logic and Cost Basis
+
+- One shared credit currency across LiNKautowork and LiNKskills.
+- Internal COGS baseline: $0.012 per credit.
+- Minimum gross margin policy: 80% floor across published bundles.
+- Billing unit for each run:
+- total credits = execution credits + tool credits
+- tool credits convert direct provider costs (LLM/API/OCR/enrichment/etc.) into credits with reliability buffer
+
+## 3.2 Final Credit Bundles and PAYG
+
+- Standard bundle: 2,500 credits/month at $199.99
+- Effective price: about $0.080/credit
+- Gross margin: about 85.0%
+
+- Premium bundle: 10,000 credits/month at $699.99
+- Effective price: about $0.070/credit
+- Gross margin: about 82.9%
+
+- Enterprise bundle: 25,000 credits/month at $1,624.99
+- Effective price: about $0.065/credit
+- Gross margin: about 81.5%
+
+- PAYG (no bundle): $0.10/credit
+- Gross margin: about 88.0%
+
+Overage credit rule:
+
+- Bundle customers pay overage at their package-effective credit rate.
+- Non-bundle customers pay PAYG rate.
+
+## 3.3 Why This Model Was Chosen
+
+- Keeps entry barrier low for light users.
+- Preserves margins on heavy runs by passing variable tool costs through tool credits.
+- Supports outcome-based billing rather than flat subscriptions.
+- Creates one commercial model usable by both LiNKautowork and LiNKskills.
+
+## 4. Other Business-Line Pricing Anchors (Current Planning Status)
+
+The following are planning anchors and can be revised in future pricing reviews:
+
+- LiNKbot pilot or managed worker: about $1,000 to $2,000 setup plus about $1,000 to $3,500 monthly.
+- LiNKskills pilot access (non-credit custom access cases): about $99 to $999 monthly depending on depth.
+
+## 5. Research and Data Used
+
+## 5.1 External references used in pricing analysis
+
+Infrastructure and platform references:
+
+- DigitalOcean Droplet pricing: https://www.digitalocean.com/pricing/droplets
+- DigitalOcean bandwidth billing: https://docs.digitalocean.com/platform/billing/bandwidth/
+- DigitalOcean backups pricing: https://docs.digitalocean.com/products/backups/details/pricing/
+- Supabase billing and overages: https://supabase.com/docs/guides/platform/billing-on-supabase
+
+LLM/tooling references:
+
+- OpenAI API pricing: https://openai.com/api/pricing/
+- n8n pricing reference: https://n8n.io/pricing/
+- n8n workflow library reference: https://n8n.io/workflows/
+
+Bot and architecture capability references:
+
+- OpenClaw docs: https://docs.openclaw.ai/
+- OpenClaw repository: https://github.com/OpenClawAI/openclaw
+- Agent Zero repository: https://github.com/agent0ai/agent-zero
+
+## 5.2 Internal evidence used
+
+- LiNKtrend operating strategy and business-line drafts in this repository
+- LiNKsites repo documentation copied into `repo_reference_docs/LiNKsites`
+- LiNKskills PRD and catalog in `repo_reference_docs/LiNKskills`
+- LiNKbot deployment and architecture notes in `repo_reference_docs/LiNKbot`
+
+## 6. Governance Rules
+
+- Any pricing change must update this file and the corresponding business-line documents.
+- Margin floor exceptions below 80% require explicit executive approval.
+- Provider-cost changes should trigger quarterly review of overage pass-through and credit conversion.
+- Credit-metering logic must remain transparent and auditable at run level.
